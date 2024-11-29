@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity } from 'react-native';
+import { Camera } from 'react-native-vision-camera';
+import { useNavigation } from '@react-navigation/native';
 
 const RegisterScreen: React.FC = () => {
   const [name, setName] = useState<string>('');
@@ -7,9 +9,12 @@ const RegisterScreen: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [reenterPassword, setReenterPassword] = useState<string>('');
+  const [cameraPermission, setCameraPermission] = useState(false);
+  const navigation = useNavigation();
+
 
   const handleTakePicture = () => {
-    // navigation.navigate('PictureScreen'); // Uncomment this line when the Facial Scan screen is implemented
+    navigation.navigate('PictureScreen');
   };
 
   const handleSignUp = () => {

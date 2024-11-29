@@ -8,9 +8,6 @@ import HomeScreen from '@/components/HomeScreen'; // Adjust the path as necessar
 import RegisterScreen from '@/components/RegisterScreen'; // Adjust the path as necessary
 import appConfig from '@/app.json';
 import Amplify from 'aws-amplify';
-import awsconfig from '@amplify/.config/aws-exports'; // Adjust the path as necessary
-
-Amplify.configure(awsconfig);
 
 const Stack = createStackNavigator();
 const appName = appConfig.expo.name;
