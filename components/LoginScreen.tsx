@@ -25,9 +25,7 @@ const LoginScreen: React.FC = () => {
     navigation.navigate('Register');
   };
 
-  const handleCode = () => {
-    navigation.navigate('CodeEntry');
-  };
+
 
   return (
     <View style={styles.container}>
@@ -56,9 +54,6 @@ const LoginScreen: React.FC = () => {
       </View>
       <TouchableOpacity style={styles.registerContainer} onPress={handleRegister}>
         <Text style={styles.registerText}>Don't have an account? Register</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.registerContainer} onPress={handleCode}>
-        <Text style={styles.registerText}>Enter Code</Text>
       </TouchableOpacity>
     </View>
   );

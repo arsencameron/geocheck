@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const CodeEntryScreen: React.FC = () => {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
-
+  const navigation = useNavigation();
   const handleCodeSubmit = () => {
     if (code.trim() === '') {
       setMessage('Please enter a code.');
     } else {
-      setMessage(`Code submitted: ${code}`);
+      setMessage(`Attendance noted: ${code}`);
       // Add your logic here for what happens when the code is submitted.
     }
   };

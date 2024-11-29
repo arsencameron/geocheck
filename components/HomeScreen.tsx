@@ -1,6 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
+
+const handleCode = () => {
+  navigation.navigate('CodeEntry');
+};
+
 const HomeScreen: React.FC = () => {
   return (
     <View style={styles.container}>
@@ -11,11 +16,21 @@ const HomeScreen: React.FC = () => {
         />
         <Text style={styles.checkinText}>Check-In</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.registerContainer} onPress={handleCode}>
+        <Text style={styles.registerText}>Enter Code</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  registerContainer: {
+    marginTop: 16,
+  },
+  registerText: {
+    fontSize: 16,
+    color: '#007BFF',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
