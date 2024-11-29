@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from utils.dynamodb_helper import add_item, get_item
+from scripts.dynamodb_helper import add_item, get_item
 
 def mark_attendance(request):
     user_id = request.GET.get('user_id')

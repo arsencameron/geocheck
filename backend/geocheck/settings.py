@@ -82,6 +82,11 @@ DATABASES = {
     }
 }
 
+AWS_ACCESS_KEY_ID = 'ASIA3AHN342JJEQL3JUA'
+AWS_SECRET_ACCESS_KEY = 'oJp8fMG9xbrjhHmpJwwPtsCqT9iYPw/jF5J3/AlK'
+AWS_REGION = 'us-west-2'
+DYNAMODB_TABLE_NAME = 'AttendanceRecords'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from utils.dynamodb_helper import dynamodb
+from scripts.dynamodb_helper import dynamodb
 
 class Command(BaseCommand):
     help = 'Set up DynamoDB table'
