@@ -13,5 +13,10 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true
+  },
 }
