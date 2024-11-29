@@ -9,6 +9,7 @@ import RegisterScreen from '../../components/RegisterScreen';
 import PictureScreen from '../../components/PictureScreen';
 import appConfig from '../../app.json';
 import Amplify from 'aws-amplify';
+import CodeEntryScreen from '@/components/CodeScreen';
 // import awsconfig from '@/amplify'; 
 
 // Amplify.configure(awsconfig);
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="PictureScreen" component={PictureScreen} />
+        <Stack.Screen name="CodeEntry" component={CodeEntryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
