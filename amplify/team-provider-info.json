@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-geopresent-dev-ec06e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::756413097618:role/amplify-geopresent-dev-ec06e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::756413097618:role/amplify-geopresent-dev-ec06e-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-geopresent-dev-ec06e-deployment",
+      "UnauthRoleName": "amplify-geopresent-dev-ec06e-unauthRole",
+      "StackName": "amplify-geopresent-dev-ec06e",
+      "StackId": "arn:aws:cloudformation:us-west-2:756413097618:stack/amplify-geopresent-dev-ec06e/63b70050-ae7c-11ef-94f7-06b888091933",
+      "AmplifyAppId": "d2e80taygdlobl"
+    },
+    "categories": {
+      "auth": {
+        "geopresent09aae2d7": {}
+      }
+    }
+  }
+}
