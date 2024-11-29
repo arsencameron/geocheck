@@ -6,7 +6,7 @@ const HomeScreen: React.FC = () => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.checkinContainer}>
         <Image
-          source={require('@/assets/images/checkin.png')} // Adjust the path as necessary
+          source={require('../assets/images/checkin.png')} // Adjust the path as necessary
           style={styles.checkinImage}
         />
         <Text style={styles.checkinText}>Check-In</Text>
