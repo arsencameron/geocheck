@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const RegisterScreen: React.FC = () => {
   const [name, setName] = useState<string>('');
@@ -7,6 +8,7 @@ const RegisterScreen: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [reenterPassword, setReenterPassword] = useState<string>('');
+  const navigation = useNavigation();
 
   const handleTakePicture = () => {
     // navigation.navigate('PictureScreen'); // Uncomment this line when the Facial Scan screen is implemented
@@ -21,8 +23,7 @@ const RegisterScreen: React.FC = () => {
       Alert.alert('Error', 'Passwords do not match.');
       return;
     }
-    Alert.alert('Success', 'Account created successfully!');
-    // navigation.navigate('Home'); // Uncomment this line to navigate to Home screen after successful registration
+    navigation.navigate('Home'); // Uncomment this line to navigate to Home screen after successful registration
   };
 
   return (
@@ -53,14 +54,14 @@ const RegisterScreen: React.FC = () => {
         placeholder="Password"
         value={password}
         onChangeText={(text) => setPassword(text)}
-        secureTextEntry
+
       />
       <TextInput
         style={styles.input}
         placeholder="Re-enter Password"
         value={reenterPassword}
         onChangeText={(text) => setReenterPassword(text)}
-        secureTextEntry
+
       />
       <TouchableOpacity style={styles.button} onPress={handleTakePicture}>
         <Text style={styles.buttonText}>Take Picture</Text>

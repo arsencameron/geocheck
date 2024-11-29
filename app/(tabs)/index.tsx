@@ -3,14 +3,10 @@ import React from 'react';
 import { AppRegistry } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from '@/components/LoginScreen'; // Adjust the path as necessary
-import HomeScreen from '@/components/HomeScreen'; // Adjust the path as necessary
-import RegisterScreen from '@/components/RegisterScreen'; // Adjust the path as necessary
+import LoginScreen from '@/components/LoginScreen'; 
+import HomeScreen from '@/components/HomeScreen'; 
+import RegisterScreen from '@/components/RegisterScreen'; 
 import appConfig from '@/app.json';
-import Amplify from 'aws-amplify';
-import awsconfig from '@amplify/.config/aws-exports'; // Adjust the path as necessary
-
-Amplify.configure(awsconfig);
 
 const Stack = createStackNavigator();
 const appName = appConfig.expo.name;
