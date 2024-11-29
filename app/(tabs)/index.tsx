@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../../components/LoginScreen'; 
 import HomeScreen from '../../components/HomeScreen'; 
 import RegisterScreen from '../../components/RegisterScreen'; 
+import PictureScreen from '../../components/PictureScreen';
 import appConfig from '../../app.json';
 import Amplify from 'aws-amplify';
 // import awsconfig from '@/amplify'; 
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="PictureScreen" component={PictureScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

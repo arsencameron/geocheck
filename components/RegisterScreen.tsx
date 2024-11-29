@@ -11,7 +11,7 @@ const RegisterScreen: React.FC = () => {
   const navigation = useNavigation();
 
   const handleTakePicture = () => {
-    // navigation.navigate('PictureScreen'); // Uncomment this line when the Facial Scan screen is implemented
+    navigation.navigate('PictureScreen'); // Uncomment this line when the Facial Scan screen is implemented
   };
 
   const handleSignUp = () => {
