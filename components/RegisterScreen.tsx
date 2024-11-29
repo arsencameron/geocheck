@@ -26,8 +26,7 @@ const RegisterScreen: React.FC = () => {
       Alert.alert('Error', 'Passwords do not match.');
       return;
     }
-    Alert.alert('Success', 'Account created successfully!');
-    // navigation.navigate('Home'); // Uncomment this line to navigate to Home screen after successful registration
+    navigation.navigate('Home'); // Uncomment this line to navigate to Home screen after successful registration
   };
 
   return (
@@ -58,14 +57,14 @@ const RegisterScreen: React.FC = () => {
         placeholder="Password"
         value={password}
         onChangeText={(text) => setPassword(text)}
-        secureTextEntry
+
       />
       <TextInput
         style={styles.input}
         placeholder="Re-enter Password"
         value={reenterPassword}
         onChangeText={(text) => setReenterPassword(text)}
-        secureTextEntry
+
       />
       <TouchableOpacity style={styles.button} onPress={handleTakePicture}>
         <Text style={styles.buttonText}>Take Picture</Text>
