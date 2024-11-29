@@ -10,6 +10,7 @@ import PictureScreen from '../../components/PictureScreen';
 import appConfig from '../../app.json';
 import Amplify from 'aws-amplify';
 import CodeEntryScreen from '@/components/CodeScreen';
+import { CounterProvider } from './CounterContext'; // Import the CounterProvider
 // import awsconfig from '@/amplify'; 
 
 // Amplify.configure(awsconfig);
@@ -19,7 +20,8 @@ const appName = appConfig.expo.name;
 
 const App: React.FC = () => {
   return (
-    <NavigationContainer>
+    <CounterProvider>
+      <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
@@ -28,6 +30,7 @@ const App: React.FC = () => {
         <Stack.Screen name="CodeEntry" component={CodeEntryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+    </CounterProvider>
   );
 };
 

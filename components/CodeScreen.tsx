@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useCounter } from '../app/(tabs)/CounterContext'; // Import the counter context
 
-const CodeEntryScreen: React.FC = () => {
+const CodeScreen: React.FC = () => {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const navigation = useNavigation();
+  const { incrementCounter } = useCounter(); // Access the incrementCounter function
+
   const handleCodeSubmit = () => {
     if (code.trim() === '') {
       setMessage('Please enter a code.');
     } else {
-      setMessage(`Attendance noted: ${code}`);
-      // Add your logic here for what happens when the code is submitted.
+      setMessage(`Code submitted: ${code}`);
+      incrementCounter(); // Increment the counter on successful submission
+      navigation.goBack(); // Navigate back to the home screen
     }
   };
 
@@ -73,4 +77,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CodeEntryScreen;
+export default CodeScreen;
