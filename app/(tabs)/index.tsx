@@ -9,7 +9,7 @@ import RegisterScreen from '../../components/RegisterScreen';
 import PictureScreen from '../../components/PictureScreen';
 import appConfig from '../../app.json';
 import Amplify from 'aws-amplify';
-import CodeEntryScreen from '@/components/CodeScreen';
+import CodeEntryScreen from '../../components/CodeScreen';
 import { CounterProvider } from './CounterContext'; // Import the CounterProvider
 // import awsconfig from '@/amplify'; 
 
