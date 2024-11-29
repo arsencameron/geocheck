@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "geocheck",
-    "slug": "geocheck",
+    "name": "geopresent",
+    "slug": "geopresent",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

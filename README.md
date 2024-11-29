@@ -1,4 +1,4 @@
-# geocheck
+# geopresent
 
 Team mates:
 Seungil Baik
