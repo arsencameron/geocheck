@@ -9,56 +9,39 @@ def create_teacher_table():
         table = dynamodb.create_table(
             TableName='teachers',
             KeySchema=[
-                {
-                    'AttributeName': 'id',
-                    'KeyType': 'HASH'  # Partition key
-                }
+                {'AttributeName': 'id', 'KeyType': 'HASH'}  # Partition key
             ],
             AttributeDefinitions=[
-                {
-                    'AttributeName': 'id',
-                    'AttributeType': 'S'  # String (UUID will be stored as a string)
-                }
+                {'AttributeName': 'id', 'AttributeType': 'S'}  # String
             ],
             ProvisionedThroughput={
                 'ReadCapacityUnits': 1,
                 'WriteCapacityUnits': 1
             }
         )
-        print(f"Table {table.table_name} created successfully!")
+        print(f"Table '{table.table_name}' created successfully!")
     except ClientError as e:
-        print(f"Error creating table: {e}")
+        print(f"Error creating table 'teachers': {e}")
 
 def create_class_table():
     try:
         table = dynamodb.create_table(
             TableName='classes',
             KeySchema=[
-                {
-                    'AttributeName': 'id',
-                    'KeyType': 'HASH'  # Partition key
-                }
+                {'AttributeName': 'id', 'KeyType': 'HASH'}  # Partition key
             ],
             AttributeDefinitions=[
-                {
-                    'AttributeName': 'id',
-                    'AttributeType': 'S'  # String (UUID will be stored as a string)
-                },
-                {
-                    'AttributeName': 'teacher_id',
-                    'AttributeType': 'S'  # String
-                }
+                {'AttributeName': 'id', 'AttributeType': 'S'},  # String
             ],
             ProvisionedThroughput={
                 'ReadCapacityUnits': 1,
                 'WriteCapacityUnits': 1
             }
         )
-        print(f"Table {table.table_name} created successfully!")
+        print(f"Table '{table.table_name}' created successfully!")
     except ClientError as e:
-        print(f"Error creating table: {e}")
+        print(f"Error creating table 'classes': {e}")
 
 if __name__ == "__main__":
-    # Create tables
     create_teacher_table()
     create_class_table()
