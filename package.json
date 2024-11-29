@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "aws-amplify": "^5.3.26",
-    "aws-amplify-react-native": "^7.0.8"
+    "aws-amplify-react-native": "^7.0.8",
+    "native-base": "^2.15.2",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-svg": "^12.1.1"
   }
 }
