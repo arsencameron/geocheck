@@ -9,7 +9,7 @@ import RegisterScreen from '../../components/RegisterScreen';
 import PictureScreen from '../../components/PictureScreen';
 import appConfig from '../../app.json';
 import Amplify from 'aws-amplify';
-import CodeEntryScreen from '@/components/CodeScreen';
+import CodeEntryScreen from '../../components/CodeScreen';
 // import awsconfig from '@/amplify'; 
 
 // Amplify.configure(awsconfig);

@@ -1,23 +1,22 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 
-const handleCode = () => {
-  navigation.navigate('CodeEntry');
-};
 
 const HomeScreen: React.FC = () => {
+  const navigation = useNavigation();
+  const handleCode = () => {
+    navigation.navigate('CodeEntry');
+  };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.checkinContainer}>
+      <TouchableOpacity style={styles.checkinContainer}  onPress={handleCode}>
         <Image
           source={require('../assets/images/checkin.png')} // Adjust the path as necessary
           style={styles.checkinImage}
         />
         <Text style={styles.checkinText}>Check-In</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.registerContainer} onPress={handleCode}>
-        <Text style={styles.registerText}>Enter Code</Text>
       </TouchableOpacity>
     </View>
   );
